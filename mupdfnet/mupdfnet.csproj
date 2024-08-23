@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectGuid>{DA41D720-164A-48A1-9A8E-ED5591366BA2}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>mupdfnet</RootNamespace>
+    <AssemblyName>mupdfnet</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <TargetFrameworkProfile />
+    <NoWin32Manifest>False</NoWin32Manifest>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <NoStdLib>False</NoStdLib>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <BaseAddress>4194304</BaseAddress>
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <FileAlignment>4096</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <Optimize>False</Optimize>
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <BaseIntermediateOutputPath>obj\</BaseIntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>False</DebugSymbols>
+    <DebugType>None</DebugType>
+    <Optimize>True</Optimize>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>dll\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MainForm.cs" />
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MuPDF.NET\Annot.cs" />
+    <Compile Include="MuPDF.NET\Archive.cs" />
+    <Compile Include="MuPDF.NET\DeviceWrapper.cs" />
+    <Compile Include="MuPDF.NET\DisplayList.cs" />
+    <Compile Include="MuPDF.NET\Document.cs" />
+    <Compile Include="MuPDF.NET\DocumentWriter.cs" />
+    <Compile Include="MuPDF.NET\enums\ExtractFormat.cs" />
+    <Compile Include="MuPDF.NET\enums\FontStyle.cs" />
+    <Compile Include="MuPDF.NET\enums\FormFlags.cs" />
+    <Compile Include="MuPDF.NET\enums\ImageType.cs" />
+    <Compile Include="MuPDF.NET\enums\LanguageType.cs" />
+    <Compile Include="MuPDF.NET\enums\LineCapType.cs" />
+    <Compile Include="MuPDF.NET\enums\LinkFlags.cs" />
+    <Compile Include="MuPDF.NET\enums\LinkType.cs" />
+    <Compile Include="MuPDF.NET\enums\OcFlags.cs" />
+    <Compile Include="MuPDF.NET\enums\PdfAnnotStatus.cs" />
+    <Compile Include="MuPDF.NET\enums\PdfAnnotType.cs" />
+    <Compile Include="MuPDF.NET\enums\PdfCrypt.cs" />
+    <Compile Include="MuPDF.NET\enums\PdfFieldType.cs" />
+    <Compile Include="MuPDF.NET\enums\PdfLineEnding.cs" />
+    <Compile Include="MuPDF.NET\enums\PdfWidgetType.cs" />
+    <Compile Include="MuPDF.NET\enums\SimpleEncoding.cs" />
+    <Compile Include="MuPDF.NET\enums\STextBlockType.cs" />
+    <Compile Include="MuPDF.NET\enums\SvgText.cs" />
+    <Compile Include="MuPDF.NET\enums\TextAlign.cs" />
+    <Compile Include="MuPDF.NET\enums\TextFlags.cs" />
+    <Compile Include="MuPDF.NET\enums\TextLanguage.cs" />
+    <Compile Include="MuPDF.NET\enums\TextType.cs" />
+    <Compile Include="MuPDF.NET\Font.cs" />
+    <Compile Include="MuPDF.NET\GraftMap.cs" />
+    <Compile Include="MuPDF.NET\Link.cs" />
+    <Compile Include="MuPDF.NET\LinkDest.cs" />
+    <Compile Include="MuPDF.NET\Page.cs" />
+    <Compile Include="MuPDF.NET\Pixmap.cs" />
+    <Compile Include="MuPDF.NET\Platforms\Windows\PlatformClass1.cs" />
+    <Compile Include="MuPDF.NET\Shape.cs" />
+    <Compile Include="MuPDF.NET\Story.cs" />
+    <Compile Include="MuPDF.NET\structures\AnnotInfo.cs" />
+    <Compile Include="MuPDF.NET\structures\AnnotValues.cs" />
+    <Compile Include="MuPDF.NET\structures\AnnotXref.cs" />
+    <Compile Include="MuPDF.NET\structures\Block.cs" />
+    <Compile Include="MuPDF.NET\structures\Border.cs" />
+    <Compile Include="MuPDF.NET\structures\Box.cs" />
+    <Compile Include="MuPDF.NET\structures\BoxLog.cs" />
+    <Compile Include="MuPDF.NET\structures\Char.cs" />
+    <Compile Include="MuPDF.NET\structures\Color.cs" />
+    <Compile Include="MuPDF.NET\structures\ColorSpace.cs" />
+    <Compile Include="MuPDF.NET\structures\DestName.cs" />
+    <Compile Include="MuPDF.NET\structures\EmbfileInfo.cs" />
+    <Compile Include="MuPDF.NET\structures\Entry.cs" />
+    <Compile Include="MuPDF.NET\structures\FileInfo.cs" />
+    <Compile Include="MuPDF.NET\structures\FontInfo.cs" />
+    <Compile Include="MuPDF.NET\structures\Hits.cs" />
+    <Compile Include="MuPDF.NET\structures\IdentityMatrix.cs" />
+    <Compile Include="MuPDF.NET\structures\ImageInfo.cs" />
+    <Compile Include="MuPDF.NET\structures\IRect.cs" />
+    <Compile Include="MuPDF.NET\structures\Label.cs" />
+    <Compile Include="MuPDF.NET\structures\LayerConfigUI.cs" />
+    <Compile Include="MuPDF.NET\structures\Line.cs" />
+    <Compile Include="MuPDF.NET\structures\LinkInfo.cs" />
+    <Compile Include="MuPDF.NET\structures\Location.cs" />
+    <Compile Include="MuPDF.NET\structures\Matrix.cs" />
+    <Compile Include="MuPDF.NET\structures\Morph.cs" />
+    <Compile Include="MuPDF.NET\structures\OCGroup.cs" />
+    <Compile Include="MuPDF.NET\structures\OCLayer.cs" />
+    <Compile Include="MuPDF.NET\structures\OCLayerConfig.cs" />
+    <Compile Include="MuPDF.NET\structures\OCMD.cs" />
+    <Compile Include="MuPDF.NET\structures\Outline.cs" />
+    <Compile Include="MuPDF.NET\structures\PageInfo.cs" />
+    <Compile Include="MuPDF.NET\structures\PathInfo.cs" />
+    <Compile Include="MuPDF.NET\structures\Point.cs" />
+    <Compile Include="MuPDF.NET\structures\Position.cs" />
+    <Compile Include="MuPDF.NET\structures\Quad.cs" />
+    <Compile Include="MuPDF.NET\structures\Rect.cs" />
+    <Compile Include="MuPDF.NET\structures\Sound.cs" />
+    <Compile Include="MuPDF.NET\structures\Span.cs" />
+    <Compile Include="MuPDF.NET\structures\SpanInfo.cs" />
+    <Compile Include="MuPDF.NET\structures\SubArchive.cs" />
+    <Compile Include="MuPDF.NET\structures\TextBlock.cs" />
+    <Compile Include="MuPDF.NET\structures\Toc.cs" />
+    <Compile Include="MuPDF.NET\structures\WordBlock.cs" />
+    <Compile Include="MuPDF.NET\TextPage.cs" />
+    <Compile Include="MuPDF.NET\TextWriter.cs" />
+    <Compile Include="MuPDF.NET\Utils.cs" />
+    <Compile Include="MuPDF.NET\Widget.cs" />
+    <Compile Include="MuPDF.NET\Xml.cs" />
+    <Compile Include="MuPDFGui.cs" />
+    <Compile Include="mupdf\mupdf.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="mupdfcpp64.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="mupdfcsharp.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="zlib.3.pdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="mupdf" />
+    <Folder Include="MuPDF.NET" />
+    <Folder Include="MuPDF.NET\enums" />
+    <Folder Include="MuPDF.NET\Platforms" />
+    <Folder Include="MuPDF.NET\Platforms\Windows" />
+    <Folder Include="MuPDF.NET\structures" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
