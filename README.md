@@ -1,2 +1,8 @@
 # mupdfnet_mod
 [WIP] My mod of MuPDF.NET, currently c/c++ code not built
+
+## ref  
+* https://github.com/ArtifexSoftware/MuPDF.NET  
+
+## License and Copyright  
+MuPDF.NET is available under open-source AGPL (included in this repository as LICENSE file) and commercial license agreements. If you determine you cannot meet the requirements of the AGPL, please contact Artifex for more information regarding a commercial license.  
